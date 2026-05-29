@@ -25,13 +25,20 @@ function findbyid(id){
         }
     }
 }
-function n_no_of_news(n){
-    for(let i =0;i<n;i++){
-        console.log(data[i].news)
-    }
+function topnews(n) {
+  for (let i = 0; i < n; i++) {
+    console.log(data[i].news);
+  }
 }
-findbyid("b");
-n_no_of_news(2);
+topnews(2);
+
+function lastnews(n) {
+  for (i = data.length - n; i < data.length; i++) {
+    console.log(data[i].news);
+  }
+}
+lastnews(2);
+
 function searchnews(keyword) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].news.includes(keyword)) {
