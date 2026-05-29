@@ -32,3 +32,11 @@ function n_no_of_news(n){
 }
 findbyid("b");
 n_no_of_news(2);
+function searchnews(keyword) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].news.includes(keyword)) {
+      console.log(data[i].news);
+    }
+  }
+}
+searchnews("nepal");
