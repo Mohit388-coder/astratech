@@ -39,11 +39,13 @@ function lastnews(n) {
 }
 lastnews(2);
 
-function searchnews(keyword) {
+function searchnews(data,keyword) {
+  const results = [];
   for (let i = 0; i < data.length; i++) {
     if (data[i].news.includes(keyword)) {
-      console.log(data[i].news);
+      results.push(data[i].news);
     }
   }
+  return results;
 }
-searchnews("nepal");
+searchnews(data, "nepal");
